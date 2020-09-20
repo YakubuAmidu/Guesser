@@ -4,13 +4,13 @@ import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
 const StartGameScreen = (props) => {
   return (
     <View style={styles.screen}>
-      <Text>Start a New Game</Text>
-      <View>
+      <Text style={styles.title}>Start a New Game</Text>
+      <View style={styles.inputContainer}>
         <Text>Select a Number</Text>
         <TextInput />
-        <View>
-          <Button title='Reset' />
-          <Button title='Confirm' />
+        <View style={styles.buttonContainer}>
+          <Button title='Reset' onPress={() => {}} />
+          <Button title='Confirm' onPress={() => {}} />
         </View>
       </View>
     </View>
