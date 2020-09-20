@@ -23,6 +23,17 @@ const styles = StyleSheet.create({
     padding: 10,
     alignItems: 'center',
   },
+  title: {
+    fontSize: 20,
+    marginVertical: 10,
+  },
+  inputContainer: {},
+  buttonContainer: {
+    flexDirection: 'row',
+    width: '100%',
+    justifyContent: 'space-between',
+    paddingHorizontal: 15,
+  },
 });
 
 export default StartGameScreen;
