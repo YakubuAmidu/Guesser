@@ -14,12 +14,19 @@ import colors from "../constants/colors";
 
 const StartGameScreen = (props) => {
   const [enteredValue, setEnteredValue] = useState("");
+  const [confirmed, setConfirmed] = useState(false);
 
   const numberInputHandler = (inputText) => {
     setEnteredValue(inputText.replace(/[^0-9]/g, ""));
   };
 
   const resetInputHandler = () => {
+    setEnteredValue(" ");
+    setConfirmed(false);
+  };
+
+  const confirmInputHandler = () => {
+    setConfirmed(true);
     setEnteredValue(" ");
   };
 
