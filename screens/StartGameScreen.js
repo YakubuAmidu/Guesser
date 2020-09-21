@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, StyleSheet, Button } from "react-native";
 
 import Card from "../components/Card";
@@ -6,6 +6,10 @@ import Input from "../components/Input";
 import colors from "../constants/colors";
 
 const StartGameScreen = (props) => {
+  const [enteredValue, setEnteredValue] = useState("");
+
+  const numberInputHandler = (inputText) => {};
+
   return (
     <View style={styles.screen}>
       <Text style={styles.title}>Start a New Game</Text>
@@ -14,10 +18,12 @@ const StartGameScreen = (props) => {
         <Input
           style={styles.input}
           blurOnSubmit
-          autoCapitalization="none"
+          autoCapitalize="none"
           autoCorrect={false}
-          keyboardType="numeric"
+          keyboardType="number-pad"
           maxLength={2}
+          onChangeText={numberInputHandler}
+          value={enteredValue}
         />
         <View style={styles.buttonContainer}>
           <View style={styles.button}>
