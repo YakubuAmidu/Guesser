@@ -22,19 +22,19 @@ const StartGameScreen = (props) => {
   };
 
   const resetInputHandler = () => {
-    const chosenNumber = parseInt(enteredValue);
-    if (chosenNumber === NaN || chosenNumber <= 0 || chosenNumber > 99) {
-      reuturn;
-    }
-
     setEnteredValue(" ");
-    setSelectedNumber(chosenNumber);
     setConfirmed(false);
   };
 
   const confirmedInputHandler = () => {
+    const chosenNumber = parseInt(enteredValue);
+    if (chosenNumber === NaN || chosenNumber <= 0 || chosenNumber > 99) {
+      return;
+    }
+
     setConfirmed(true);
-    setEnteredValue(" ");
+    setSelectedNumber(chosenNumber);
+    setEnteredValue("");
   };
 
   let confirmedOutput;
@@ -80,6 +80,7 @@ const StartGameScreen = (props) => {
             </View>
           </View>
         </Card>
+        {confirmedOutput}
       </View>
     </TouchableWithoutFeedback>
   );
