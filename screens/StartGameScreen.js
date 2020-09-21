@@ -32,10 +32,16 @@ const StartGameScreen = (props) => {
     setConfirmed(false);
   };
 
-  const confirmInputHandler = () => {
+  const confirmedInputHandler = () => {
     setConfirmed(true);
     setEnteredValue(" ");
   };
+
+  let confirmedOutput;
+
+  if (confirmed) {
+    confirmedOutput = <Text>Chosen Number: {selectedNumber}</Text>;
+  }
 
   return (
     <TouchableWithoutFeedback
@@ -68,7 +74,7 @@ const StartGameScreen = (props) => {
             <View style={styles.button}>
               <Button
                 title="Confirm"
-                onPress={() => {}}
+                onPress={confirmedInputHandler}
                 color={colors.primary}
               />
             </View>
