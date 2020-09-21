@@ -23,6 +23,11 @@ const GameScreen = (props) => {
   const currentLow = useRef(1);
   const currentHigh = useRef(100);
 
+  useEffect(() => {
+    if (currentGuess === props.userChoice) {
+    }
+  });
+
   const nextGuessHandler = (direction) => {
     if (
       (direction === "lower" && currentGuess < props.userChoice) ||
