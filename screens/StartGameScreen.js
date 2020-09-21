@@ -8,7 +8,9 @@ import colors from "../constants/colors";
 const StartGameScreen = (props) => {
   const [enteredValue, setEnteredValue] = useState("");
 
-  const numberInputHandler = (inputText) => {};
+  const numberInputHandler = (inputText) => {
+    setEnteredValue(inputText);
+  };
 
   return (
     <View style={styles.screen}>
