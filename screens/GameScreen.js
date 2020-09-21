@@ -38,11 +38,12 @@ const GameScreen = (props) => {
     } else {
       currentLow.current = currentGuess;
     }
-    generateRandomBetween(
+    const nextNumber = generateRandomBetween(
       currentLow.current,
       currentHigh.current,
       currentGuess
     );
+    setCurrentGuess(nextNumber);
   };
 
   return (
