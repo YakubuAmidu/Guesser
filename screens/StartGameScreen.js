@@ -46,8 +46,10 @@ const StartGameScreen = (props) => {
   if (confirmed) {
     confirmedOutput = (
       <Card style={styles.summaryContainer}>
-        <Text>Chosen Number: {selectedNumber}</Text>
-        <Button title="Start Game" />
+        <Text>You selected</Text>
+        <View>
+          <Text>{selectedNumber}</Text>
+        </View>
       </Card>
     );
   }
